@@ -11,6 +11,12 @@ module Api::V1
       render json: @tweet
     end
 
+    def update
+      @tweet = Tweet.find(params[:id])
+      @tweet.update_attributes(tweet_params)
+      render json: @tweet
+    end
+
     private
     def tweet_params
       params.require(:tweet).permit(:body, :user)

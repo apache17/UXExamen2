@@ -22,6 +22,14 @@ class TweetsContainer extends Component {
     .catch(error => console.log(error))
   }
 
+  updateTweet = (tweet) => {
+  		const tweetIndex = this.state.tweets.findIndex(x => x.id === tweet.id)
+  		const tweets = update(this.state.tweets,{
+  			[tweetIndex]: { $set: tweet }
+  		})
+  		this.setState({tweets: tweets})
+  }
+
   addNewTweet = () => {
     axios.post(
       'http://localhost:3001/api/v1/tweets',
