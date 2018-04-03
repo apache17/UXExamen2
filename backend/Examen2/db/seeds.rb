@@ -1,19 +1,11 @@
 tweets = Tweet.create(
   [
     {
-      body: "Hola Perruuuuuu",
-      user: "LaChela504"
+      body: "Probando",
+      user: "BRGP"
     },
     {
-      body: "Hola Perruuuuuux2",
-      user: "LaChela504"
-    },
-    {
-      body: "Hola Perruuuuuux3",
-      user: "LaChela504"
-    },
-    {
-      body: "Hola Perruuuuuux4",
-      user: "LaChela504"
+      body: "Examen2",
+      user: "UX"
     }
   ])
